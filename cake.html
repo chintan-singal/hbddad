@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Cutting Game - Happy 60th Birthday</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cake.css">
+</head>
+<body>
+    <!-- BACKGROUND PARTICLES -->
+    <div class="particles-bg" id="particlesBg"></div>
+
+    <!-- MUSIC TOGGLE -->
+    <button class="music-toggle-cake" id="musicToggleCake" title="Toggle birthday music">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18v-6m6 6v-6M3 7l18-4v14a6 6 0 01-6 6H9a6 6 0 01-6-6V7z"></path>
+        </svg>
+    </button>
+
+    <!-- TWO-COLUMN SPLIT CONTAINER -->
+    <div class="split-container">
+        
+        <!-- LEFT PANEL: CAKE INTERACTION AREA -->
+        <div class="left-panel">
+            <div class="cake-area">
+                <!-- PLATE -->
+                <div class="plate"></div>
+
+                <!-- MAIN CAKE -->
+                <div class="cake" id="mainCake">
+                    <!-- Bottom Layer -->
+                    <div class="cake-layer layer-1">
+                        <div class="layer-icing"></div>
+                    </div>
+
+                    <!-- Middle Layer -->
+                    <div class="cake-layer layer-2">
+                        <div class="layer-icing"></div>
+                    </div>
+
+                    <!-- Top Layer (contains candles) -->
+                    <div class="cake-layer layer-3">
+                        <div class="layer-icing"></div>
+
+                        <!-- CANDLES (inside top layer) -->
+                        <div class="candles-row" id="candlesRow">
+                            <div class="candle-wrapper" data-candle="0">
+                                <div class="candle-flame" id="candle-0"></div>
+                                <div class="candle-stick"></div>
+                            </div>
+                            <div class="candle-wrapper" data-candle="1">
+                                <div class="candle-flame" id="candle-1"></div>
+                                <div class="candle-stick"></div>
+                            </div>
+                            <div class="candle-wrapper" data-candle="2">
+                                <div class="candle-flame" id="candle-2"></div>
+                                <div class="candle-stick"></div>
+                            </div>
+                            <div class="candle-wrapper" data-candle="3">
+                                <div class="candle-flame" id="candle-3"></div>
+                                <div class="candle-stick"></div>
+                            </div>
+                            <div class="candle-wrapper" data-candle="4">
+                                <div class="candle-flame" id="candle-4"></div>
+                                <div class="candle-stick"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SHINE/GLOSS EFFECT -->
+                    <div class="cake-shine"></div>
+                </div>
+
+                <!-- KNIFE (hidden, will appear during cut) -->
+                <div class="knife" id="knife">🔪</div>
+
+                <!-- SPARKLES CONTAINER -->
+                <div class="sparkles-container" id="sparklesContainer"></div>
+
+                <!-- BALLOONS CONTAINER -->
+                <div class="balloons-container" id="balloonsContainer"></div>
+
+                <!-- CONFETTI CONTAINER -->
+                <div class="confetti-container" id="confettiContainer"></div>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL: MESSAGES AND CONTROLS -->
+        <div class="right-panel">
+            <div class="messages-section">
+                <h1 class="message-title">Celebrate!</h1>
+                
+                <div class="message-list">
+                    <!-- Message 1: Blow candles -->
+                    <div class="message-item" id="msg-1">
+                        <p class="message-text">Blow out all the candles!</p>
+                    </div>
+
+                    <!-- Message 2: Make a wish -->
+                    <div class="message-item hidden" id="msg-2">
+                        <p class="message-text">Make a wish, Dad ❤️</p>
+                    </div>
+
+                    <!-- Message 3: Cut the cake -->
+                    <div class="message-item hidden" id="msg-3">
+                        <p class="message-text">Every day with you has been the sweetest part of my life.</p>
+                    </div>
+
+                    <!-- Message 4: Strength -->
+                    <div class="message-item hidden" id="msg-4">
+                        <p class="message-text">Your strength made me who I am.</p>
+                    </div>
+
+                    <!-- Message 5: Love -->
+                    <div class="message-item hidden" id="msg-5">
+                        <p class="message-text">Your love has been my greatest gift.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTROLS SECTION -->
+            <div class="controls-section">
+                <button class="btn btn-primary" id="cutCakeBtn">Cut the Cake 🎂</button>
+                <button class="btn btn-secondary" id="resetBtn">Reset Cake</button>
+                <a href="index.html" class="btn btn-tertiary">Back to Timeline</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FULL-SCREEN BALLOON OVERLAY -->
+    <div class="balloon-overlay" id="balloonOverlay"></div>
+
+    <!-- BACKGROUND AUDIO -->
+    <audio id="birthdayMusic" loop>
+        <source src="data:audio/wav;base64,UklGRiYAAABXQVZFZm10IBAAAAABAAEAQB8AAAB9AAACABAAZGF0YQIAAAAAAA==" type="audio/wav">
+    </audio>
+
+    <script src="cake.js"></script>
+</body>
+</html>

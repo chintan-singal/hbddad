@@ -694,13 +694,13 @@ body {
     .layer-2 {
         width: 75%;
         height: 85px;
-        bottom: 80px;
+        bottom: 100px;
     }
 
     .layer-3 {
         width: 65%;
         height: 75px;
-        bottom: 155px;
+        bottom: 185px;
     }
 
     .plate {
@@ -779,13 +779,13 @@ body {
     .layer-2 {
         width: 240px;
         height: 75px;
-        bottom: 70px;
+        bottom: 85px;
     }
 
     .layer-3 {
         width: 200px;
         height: 70px;
-        bottom: 135px;
+        bottom: 160px;
     }
 
     .plate {
@@ -863,18 +863,19 @@ body {
     .layer-1 {
         width: 240px;
         height: 75px;
+        bottom: 0;
     }
 
     .layer-2 {
         width: 200px;
         height: 65px;
-        bottom: 60px;
+        bottom: 75px;
     }
 
     .layer-3 {
         width: 165px;
         height: 60px;
-        bottom: 115px;
+        bottom: 140px;
     }
 
     .plate {
@@ -946,13 +947,13 @@ body {
     .layer-2 {
         width: 220px;
         height: 70px;
-        bottom: 65px;
+        bottom: 80px;
     }
 
     .layer-3 {
         width: 180px;
         height: 65px;
-        bottom: 125px;
+        bottom: 150px;
     }
 
     .plate {
